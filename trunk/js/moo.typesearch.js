@@ -1,5 +1,5 @@
 /*
- * moo.typeSearch 0.1 - <input type="search"> for all browsers
+ * moo.typeSearch 0.1.1 - <input type="search"> for all browsers
  *
  * Copyright (c) 2008 Lim Chee Aun (cheeaun.com)
  * Licensed under the MIT license.
@@ -65,6 +65,8 @@ var typeSearch = new Class({
 			if (val == '' || val == this.options.placeholder) reset.setStyle('display', 'none');
 			
 			var searchbar = new Element('input', {
+				'id': self.input.getProperty('id'),
+				'name': self.input.getProperty('name'),
 				'type': 'text',
 				'class': 'type-search',
 				'styles': {

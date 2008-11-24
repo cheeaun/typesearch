@@ -1,5 +1,5 @@
 /*
- * jQuery.typeSearch 0.1 - <input type="search"> for all browsers
+ * jQuery.typeSearch 0.1.1 - <input type="search"> for all browsers
  *
  * Copyright (c) 2008 Lim Chee Aun (cheeaun.com)
  * Licensed under the MIT license.
@@ -50,6 +50,10 @@
 				if (val == '' || val == options.placeholder) reset.hide();
 				
 				var searchbar = $('<input type="text" class="type-search">')
+					.attr({
+						'id': el.attr('id'),
+						'name': el.attr('name')
+					})
 					.insertAfter(el)
 					.wrap(wrapper)
 					.before(left)
